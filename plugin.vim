@@ -5,18 +5,24 @@ function! GetRandomNumber()
 	return random
 endfunction
 
-" get the total number tof tags in the tag file
-" :h line
-" http://stackoverflow.com/a/22891311/2558252
-function! GetTagsNumber()
+function! OpenTagsFile()
 	" open the tag file in a new buffer
-	view $VIMRUNTIME/doc/tags
-	" save the line number of the end of file
-	let tagsNumber = line('$')
+	sview $VIMRUNTIME/doc/tags
+endfunction
+
+function! CloseTagsFile()
 	" move back to the previous buffer
 	buffer
 	" delete the previously opened buffer (the tags file)
 	bdelete
+endfunction
+
+" get the total number tof tags in the tag file
+" :h line
+" http://stackoverflow.com/a/22891311/2558252
+function! GetTagsNumber()
+	" save the line number of the end of file
+	let tagsNumber = line('$')
 	return tagsNumber
 endfunction
 
@@ -29,20 +35,19 @@ function! GetRandomTagNumber()
 endfunctio
 
 function! GetRandomTag()
+	call OpenTagsFile()
 	let randomTag = GetRandomTagNumber()
-	view $VIMRUNTIME/doc/tags
 	call setpos('.', [0, randomTag, 0, 0])
 	let tagValue = expand('<cWORD>')
-	buffer
-	bdelete
+	call CloseTagsFile()
 	echom tagValue
 endfunction
 
-nnoremap <leader>sr :call GetRandomNumber()<cr>
-nnoremap <leader>sn :call GetTagsNumber()<cr>
-nnoremap <leader>sd :call GetRandomTagNumber()<cr>
-nnoremap <leader>st :call GetRandomTag()<cr>
-nnoremap <Leader>ss :source %<cr>
+" custom mapping for plugin testing
+" nnoremap <leader>sr :call GetRandomNumber()<cr>
+" nnoremap <leader>sn :call GetTagsNumber()<cr>
+" nnoremap <leader>sd :call GetRandomTagNumber()<cr>
+nnoremap <leader>pt :call GetRandomTag()<cr>
+nnoremap <Leader>ps :source %<cr>
 
-" references
-echo "sourced"
+echo "Sourced"
