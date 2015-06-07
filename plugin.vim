@@ -5,11 +5,13 @@ function! GetRandomNumber()
 	return random
 endfunction
 
+" open tag file
 function! OpenTagsFile()
 	" open the tag file in a new buffer
 	sview $VIMRUNTIME/doc/tags
 endfunction
 
+" close file
 function! CloseTagsFile()
 	" move back to the previous buffer
 	buffer
@@ -34,6 +36,7 @@ function! GetRandomTagNumber()
 	return randomTag
 endfunctio
 
+" combine previous function to get a random valid tag
 function! GetRandomTag()
 	call OpenTagsFile()
 	let randomTag = GetRandomTagNumber()
