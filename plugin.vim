@@ -13,7 +13,6 @@ function! GetRandomTag()
 	" get the total number tof tags in the tag file
 	" :h line
 	let tagsNumber = line('$')
-	call OpenTagsFile()
 
 	" get a valid random tag number
 	let randomTag = GetRandomNumber() % tagsNumber
@@ -28,10 +27,12 @@ function! GetRandomTag()
 	" delete the previously opened buffer (the tags file)
 	bdelete
 
-	echom tagValue
+	tabnew
+	execute ":h " . tagValue
+	" echom tagValue
 endfunction
 
-nnoremap <leader>pt :call GetRandomTag()<cr>
-nnoremap <Leader>ps :source %<cr>
+nnoremap <leader>st :call GetRandomTag()<cr>
+nnoremap <Leader>ss :source %<cr>
 
 echo "Sourced"
