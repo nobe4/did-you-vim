@@ -27,8 +27,16 @@ function! GetRandomTag()
 	" delete the previously opened buffer (the tags file)
 	bdelete
 
+	" open a new tab and display the help inside it
 	tabnew
 	execute ":h " . tagValue
+
+	" resize the help to full size
+	execute ":res"
+
+	" map for the new buffer the q command to quit
+	nnoremap <buffer> q :tabclose<CR>
+
 	" echom tagValue
 endfunction
 
