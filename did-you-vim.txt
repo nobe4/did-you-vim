@@ -1,0 +1,37 @@
+*did-you-vim.txt* Access a random documentation article at Vim startup
+
+         _  _    _                          _        ~
+       _| ||_| _| |   _ _  ___  _ _    _ _ |_| _____ ~
+      | . || || . |  | | || . || | |  | | || ||     |~
+      |___||_||___|  |_  ||___||___|   \_/ |_||_|_|_|~
+                     |___|                           ~
+
+================================================================================
+CONTENTS                                                   *did-you-vim-content*
+
+    1. Usage ............ |did-you-vim-usage|
+    2. Configuration .... |did-you-vim-configuration|
+    3. License .......... |did-you-vim-license|
+    4. Contributing ..... |did-you-vim-contributing|
+
+================================================================================
+USAGE                                                        *did-you-vim-usage*
+
+Normally you shouln'd do anything : the plugin execute itself at startup.
+If you want to re-use the commande : >
+
+    :DYV
+
+================================================================================
+CONFIGURATION                                        *did-you-vim-configuration*
+
+================================================================================
+LICENSE                                                    *did-you-vim-license*
+
+Author: Victor Haffreingue <http://nobe4.fr>
+License: Same terms as Vim itself (see |license|)
+
+================================================================================
+CONTRIBUTING                                          *did-you-vim-contributing*
+
+vim:tw=78:et:ft=help:norl:
