@@ -25,13 +25,20 @@ If you want to re-use the commande : >
 ================================================================================
 CONFIGURATION                                        *did-you-vim-configuration*
 
+    TODO
+
 ================================================================================
 LICENSE                                                    *did-you-vim-license*
 
-Author: Victor Haffreingue <http://nobe4.fr>
+Authors: Victor Haffreingue <http://nobe4.fr>
+         Adrien Fabre <http://statox.fr>
 License: Same terms as Vim itself (see |license|)
 
 ================================================================================
 CONTRIBUTING                                          *did-you-vim-contributing*
 
-vim:tw=78:et:ft=help:norl:
+You can find the github repository here :
+    <https://github.com/nobe4/did-you-vim>
+Feel free to question us with an issue
+
+" vim:tw=78:et:ft=help:norl:
