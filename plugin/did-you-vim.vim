@@ -43,4 +43,6 @@ endfunction
 nnoremap <leader>st :call GetRandomTag()<cr>
 nnoremap <Leader>ss :source %<cr>
 
+call GetRandomTag()
+
 echo "Sourced"
