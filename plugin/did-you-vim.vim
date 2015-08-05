@@ -10,7 +10,11 @@ let g:did_you_vim_version = 0.1
 " get a random number using the bach $RANDOM function
 " http://vi.stackexchange.com/a/819/1821
 function! GetRandomNumber()
-	return system("echo $RANDOM")
+    if has('win32')
+        return system("echo %RANDOM%")
+    else
+        return system("echo $RANDOM")
+    endif
 endfunction
 
 let g:selectedTag = ""
