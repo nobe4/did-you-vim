@@ -25,7 +25,11 @@ If you want to re-use the commande : >
 ================================================================================
 CONFIGURATION                                        *did-you-vim-configuration*
 
-    TODO
+By default, the plugin will only add a command. If you want to autoload the
+plugin on vim starup, you set in your vimrc:
+>
+  let g:did_you_vim_autoload = 1
+>
 
 ================================================================================
 LICENSE                                                    *did-you-vim-license*
