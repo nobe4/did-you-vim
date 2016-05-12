@@ -67,14 +67,18 @@ function! s:DisplayRandomTag()
 	nnoremap <buffer> s :call SaveTag()<CR>
 endfunction
 
+function! s:DidYouVim()
+	" load this session tag
+	silent call <SID>GetRandomTag()
+	" display this session tag's documentation
+	silent call <SID>DisplayRandomTag()
+endfunction
+
 " Autoload only on user demand
 if exists("g:did_you_vim_autoload")
-	" load this session tag
-	silent call s:GetRandomTag()
-	" display this session tag's documentation
-	silent call s:DisplayRandomTag()
+	silent call <SID>DidYouVim()
 endif
 
 
 " define user-accessible command
-command! DYV call s:DisplayRandomTag()
+command! DYV silent call <SID>DidYouVim()
