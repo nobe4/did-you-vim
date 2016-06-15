@@ -12,7 +12,7 @@ The Vim documentation is massive and reading it little by little is a good way t
 Using your plugin manager of choice : 
 
 * [Vundle](https://github.com/gmarik/Vundle.vim) : `Plugin 'nobe4/did-you-vim'`
-* [Pathogene](https://github.com/tpope/vim-pathogen) : `cd ~/.vim/bundle && git clone git://github.com/nobe4/did-you-vim`
+* [Pathogen](https://github.com/tpope/vim-pathogen) : `cd ~/.vim/bundle && git clone git://github.com/nobe4/did-you-vim`
 * ... (PR to add your favorite )
 
 ## Usage
